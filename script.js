@@ -1,11 +1,9 @@
 function addTask() {
-    const input = document.getElementById("taskInput");
+    const input = document.getElementById("task_input");
     const taskText = input.value.trim();
-
     if (taskText === "") return;
 
-    const taskList = document.getElementById("taskList");
-
+    const task_list = document.getElementById("task_list");
     const li = document.createElement("li");
 
     const checkbox = document.createElement("input");
@@ -38,7 +36,6 @@ function addTask() {
     li.appendChild(checkbox);
     li.appendChild(span);
     li.appendChild(actions);
-
-    taskList.appendChild(li);
+    task_list.appendChild(li);
     input.value = "";
 }
